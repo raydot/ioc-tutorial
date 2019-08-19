@@ -15,10 +15,10 @@ Issues:
 
 A little refactoring will solve the third problem.  Right now the components are in charge of their own dependencies.  We will inver that, so the components are no longer in control.  We'll create the dependencies elsewhere and inject them.  Inversion of control removes the direct dependencies, and dependency injection is how instances are passed to components.
 
-## Further adventures
+## Further Adventures
 In the second example, the Inversion of Control pattern has been applied, and we are doing some simple dependency injection.  However, the previous issues #1 and #2 have not been addressed.  The objects must still be created in the right order.  It's still difficult to develop in parallel or out of sequence.
 
-<em>What do <strong>do?</strong></em>
+<em>What to <strong>do?</strong></em>
 
 The solution is to bring in an IoC container to manage Dependency Injection.  There are many kinds, and they all typically work like this:
 
@@ -40,4 +40,4 @@ This is a very simple example.  [Angular's dependency injection](https://angular
     <li>Always give me a new instance when I register a car (factory)</li>
 </ul>
 
-Last but not least: Even though they are often used interchangeable, IoC and DI are related, but not the same thing.  The end.
+Last but not least: Even though they are often used interchangeably, IoC and DI are related, but not the same thing.  The end.
