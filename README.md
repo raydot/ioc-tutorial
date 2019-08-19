@@ -30,3 +30,14 @@ The solution is to bring in an IoC container to manage Dependency Injection.  Th
 
 This requires involving the author's [jsInject library](https://github.com/JeremyLikness/jsInject) which is based on the way Angular handles dependency injection.  The author has also written a [blog post](https://csharperimage.jeremylikness.com/2014/06/dependency-injection-explained-via.html) on dependency injection in JavaScript.
 
+## Example 3
+There's an added benefit that may not be obvious.  In the JSFiddle [example](https://jsfiddle.net/jeremylikness/8y0ro5gx/) "test engine" is explicitly rendered with "test pistons."  You could just as easily render the "pistons" label with `TestPistons` and everything would be just fine.  In a full project, this might be separate components.
+
+This is a very simple example.  [Angular's dependency injection](https://angular.io/guide/architecture-services) provides a more advanced solution.  One can define different registrations (providers) such as types (via TypeScript), hard-coded values, and even factories that are functions that return the desired value.  You can also manage lifetime or scope:
+
+<ul>
+    <li>Always give me the same instance when I register a car (singleton)</li>
+    <li>Always give me a new instance when I register a car (factory)</li>
+</ul>
+
+Last but not least: Even though they are often used interchangeable, IoC and DI are related, but not the same thing.  The end.
